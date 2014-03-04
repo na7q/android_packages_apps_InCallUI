@@ -155,17 +155,6 @@ public class ConferenceManagerFragment
         });
     }
 
-   @Override
-    public void setupEndButtonForRowWithUrl(final int rowId, final String url) {
-        View endButton = mConferenceCallList[rowId].findViewById(R.id.conferenceCallerDisconnect);
-        endButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getPresenter().endConferenceConnectionUrl(rowId, url);
-            }
-        });
-    }
-
     @Override
     public final void setCanSeparateButtonForRow(final int rowId, boolean canSeparate) {
         final View separateButton = mConferenceCallList[rowId].findViewById(
